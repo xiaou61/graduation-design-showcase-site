@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="毕业设计一条龙服务报价官网，展示定制开发价格、GitHub开源项目部署、介绍返佣、论文查重承诺、项目案例、付款方式和客户反馈。"
+    />
+    <title>毕设一条龙交付 | 程序 · 论文 · 文档</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-grid" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="motion-backdrop" aria-hidden="true">
+      <span class="motion-line line-a"></span>
+      <span class="motion-line line-b"></span>
+      <span class="motion-line line-c"></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark">B</span>
+        <span>
+          <strong>毕设交付台</strong>
+          <small>程序 / 论文 / 文件</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#pricing">价格</a>
+        <a href="#projects">项目库</a>
+        <a href="#reviews">评价</a>
+        <a href="#referral">返佣</a>
+        <a href="#faq">说明</a>
+      </nav>
+      <button class="header-cta" id="copyQqTop" type="button" title="复制联系 QQ">
+        <span>复制 QQ</span>
+        <strong>3153566913</strong>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero section-pad">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">毕业设计成品交付 / 支持分步骤付款 / 闲鱼交易</p>
+          <h1>一眼看懂价格，放心拿走完整毕设。</h1>
+          <p class="hero-lead">
+            面向计算机毕业设计，普通项目全部按需求定制开发，覆盖 Spring Boot、Vue3、微信小程序、管理后台、数据看板、论文与配套文档。价格透明，交付拆清楚，沟通不绕弯。
+          </p>
+
+          <div class="conversion-ribbon reveal" aria-label="下单优势">
+            <span>先看方向再付款</span>
+            <span>闲鱼担保交易</span>
+            <span>整套交付 ¥1400</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="primary-action" href="#pricing">
+              <span>查看报价</span>
+              <b>1400 一条龙</b>
+            </a>
+            <a class="ghost-action" href="#projects">浏览 95+ 项目案例</a>
+          </div>
+
+          <dl class="trust-strip" aria-label="服务亮点">
+            <div>
+              <dt>100%</dt>
+              <dd>闲鱼好评率</dd>
+            </div>
+            <div>
+              <dt>定制</dt>
+              <dd>普通项目开发</dd>
+            </div>
+            <div>
+              <dt>1步1付</dt>
+              <dd>降低付款压力</dd>
+            </div>
+            <div>
+              <dt>≤20%</dt>
+              <dd>论文查重承诺</dd>
+            </div>
+            <div>
+              <dt>¥400</dt>
+              <dd>GitHub 指定部署</dd>
+            </div>
+            <div>
+              <dt>20%</dt>
+              <dd>介绍返佣最高</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-board reveal" aria-label="服务报价概览">
+          <div class="board-toolbar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <b>delivery_console.exe</b>
+          </div>
+          <div class="deal-status">
+            <span class="pulse-dot"></span>
+            <span>当前推荐：先发题目，直接匹配可讲清的项目方向</span>
+            <strong>可分步确认</strong>
+          </div>
+          <div class="price-terminal">
+            <p class="terminal-line"><span>custom build</span> 普通项目定制开发</p>
+            <div class="hero-price">
+              <small>整套打包价</small>
+              <strong>¥1400</strong>
+            </div>
+            <div class="terminal-grid">
+              <div>
+                <small>程序</small>
+                <strong>¥800</strong>
+              </div>
+              <div>
+                <small>论文</small>
+                <strong>¥400</strong>
+              </div>
+              <div>
+                <small>论文外文件</small>
+                <strong>¥200</strong>
+              </div>
+            </div>
+          </div>
+          <div class="delivery-stack">
+            <div><span>01</span> 选题确认 / 项目匹配</div>
+            <div><span>02</span> 程序演示 / 环境说明</div>
+            <div><span>03</span> 论文与文档整理</div>
+            <div><span>04</span> 闲鱼验收 / 好评闭环</div>
+            <div><span>承诺</span> 论文查重率高于 20%，直接全额退款</div>
+            <div><span>特殊</span> GitHub 开源项目指定部署 ¥400，仅含 PRD 已列内容</div>
+            <div><span>返佣</span> 介绍成交可享最高 20% 返佣</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad price-section" id="pricing">
+        <div class="section-heading reveal">
+          <p class="eyebrow">报价清晰，不玩隐藏项</p>
+          <h2>普通项目全部定制开发，也可以按模块分开拿。</h2>
+          <p>适合预算不同、进度不同的同学。想省心就一条龙，想自己补部分内容也能按模块购买；GitHub 开源部署是特殊项目，不按定制开发计算。</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card featured reveal">
+            <div class="badge">最省心</div>
+            <h3>一条龙服务</h3>
+            <p>程序、论文、论文外配套文件一起交付，普通毕设项目按需求定制开发，适合想直接推进答辩准备的同学。</p>
+            <strong class="money">¥1400</strong>
+            <ul>
+              <li>普通项目均为定制开发</li>
+              <li>项目源码与运行说明</li>
+              <li>论文正文与配套材料</li>
+              <li>数据库、接口、截图等常用文件</li>
+              <li>支持按阶段确认后付款</li>
+              <li>论文查重率高于 20% 全额退款</li>
+            </ul>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>只要程序</h3>
+            <p>适合已有论文或想自己写论文，只需要定制可演示系统的同学。</p>
+            <strong class="money">¥800</strong>
+            <ul>
+              <li>按题目需求定制开发</li>
+              <li>前后端源码</li>
+              <li>数据库脚本</li>
+              <li>运行环境说明</li>
+            </ul>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>只要论文</h3>
+            <p>适合已有系统，需要补齐论文结构、章节内容和格式的同学。</p>
+            <strong class="money">¥400</strong>
+            <ul>
+              <li>论文主体内容</li>
+              <li>系统分析与设计描述</li>
+              <li>常用图表文字说明</li>
+              <li>查重率高于 20% 全额退款</li>
+            </ul>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>论文外文件</h3>
+            <p>适合缺少开题、任务书、答辩 PPT、说明书等配套材料的情况。</p>
+            <strong class="money">¥200</strong>
+            <ul>
+              <li>开题与任务材料</li>
+              <li>答辩展示素材</li>
+              <li>项目说明整理</li>
+            </ul>
+          </article>
+
+          <article class="price-card special reveal">
+            <div class="badge">特殊项目</div>
+            <h3>GitHub 开源部署</h3>
+            <p>基于 GitHub 开源项目，按你在 PRD 中列明的内容进行指定部署；PRD 外新增功能另行付费。</p>
+            <strong class="money">¥400</strong>
+            <ul>
+              <li>按 GitHub / PRD 指定内容部署</li>
+              <li>基础运行与访问演示</li>
+              <li>仅包含 PRD 已列功能</li>
+              <li>后续加功能需另行付费</li>
+              <li>不包含论文与答辩材料</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="custom-boundary-panel reveal" aria-label="定制开发与特殊项目说明">
+          <div>
+            <span>普通毕设项目</span>
+            <strong>全部定制开发</strong>
+            <p>围绕题目、角色、功能、数据库、论文描述来做，适合正式毕业设计。</p>
+          </div>
+          <div>
+            <span>特殊项目</span>
+            <strong>GitHub 指定部署 ¥400</strong>
+            <p>按 GitHub 里的 PRD 内容部署一个可访问项目，只包含 PRD 已列功能；后续新增功能需要另行付费。</p>
+          </div>
+        </div>
+
+        <div class="guarantee-panel reveal" aria-label="论文查重承诺">
+          <div class="guarantee-meter">
+            <span>论文承诺</span>
+            <strong>20%</strong>
+          </div>
+          <div>
+            <h3>查重率高于 20%，直接全额退款。</h3>
+            <p>
+              论文交付不是“给你一份就结束”，会围绕系统功能、数据库、模块设计和截图材料来写。若按约定交付后的论文查重率高于 20%，直接全额退款。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad process-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">流程拆开，付款也拆开</p>
+          <h2>一个步骤确认一次，交付过程更稳。</h2>
+        </div>
+        <div class="process-line">
+          <article class="process-item reveal">
+            <span>01</span>
+            <h3>确定题目</h3>
+            <p>根据专业、学校要求和现有项目库，快速匹配合适方向。</p>
+          </article>
+          <article class="process-item reveal">
+            <span>02</span>
+            <h3>程序验收</h3>
+            <p>确认功能、角色、数据库、运行方式，能演示再推进下一步。</p>
+          </article>
+          <article class="process-item reveal">
+            <span>03</span>
+            <h3>材料补齐</h3>
+            <p>整理论文、说明书、截图、开题、PPT 等答辩常用文件。</p>
+          </article>
+          <article class="process-item reveal">
+            <span>04</span>
+            <h3>闲鱼付款</h3>
+            <p>统一走闲鱼交易，支持阶段付款，历史好评率 100%。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-pad proof-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">合作企业级场景 / 多行业题材</p>
+          <h2>不是只会改模板，是有项目库和题材储备。</h2>
+        </div>
+        <div class="industry-rail reveal" aria-label="覆盖行业场景">
+          <span>智慧校园</span>
+          <span>电商零售</span>
+          <span>企业 OA</span>
+          <span>医疗挂号</span>
+          <span>物业社区</span>
+          <span>文旅票务</span>
+          <span>生产 ERP</span>
+          <span>公益捐赠</span>
+          <span>微信小程序</span>
+          <span>数据看板</span>
+          <span>定制开发</span>
+        </div>
+      </section>
+
+      <section class="section-pad projects-section" id="projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">项目库自动读取 readme_simple.md</p>
+          <h2>按题材筛选，快速找到能讲清楚的毕设。</h2>
+          <p>下面的项目来自你的项目清单，普通毕设项目均可围绕学校要求定制开发。支持关键词搜索、分类筛选和加载更多。</p>
+        </div>
+
+        <div class="project-stats reveal" aria-label="项目统计">
+          <div>
+            <strong id="projectTotal">95+</strong>
+            <span>项目总数</span>
+          </div>
+          <div>
+            <strong id="hotTotal">--</strong>
+            <span>热门题材</span>
+          </div>
+          <div>
+            <strong id="latestTotal">--</strong>
+            <span>最新项目</span>
+          </div>
+          <div>
+            <strong id="springTotal">--</strong>
+            <span>Spring Boot 覆盖</span>
+          </div>
+        </div>
+
+        <div class="project-controls reveal">
+          <div class="filter-tabs" id="filterTabs" role="tablist" aria-label="项目分类筛选"></div>
+          <label class="search-box">
+            <span>搜索项目</span>
+            <input id="projectSearch" type="search" placeholder="输入关键词，如 小程序、OA、挂号、Vue3" />
+          </label>
+        </div>
+
+        <div class="result-bar reveal">
+          <span id="resultText">正在读取项目库...</span>
+          <button id="resetFilters" type="button">重置筛选</button>
+        </div>
+
+        <div class="project-grid-list" id="projectGrid" aria-live="polite"></div>
+        <div class="load-more-wrap">
+          <button class="load-more" id="loadMore" type="button">加载更多项目</button>
+        </div>
+      </section>
+
+      <section class="section-pad reviews-section" id="reviews">
+        <div class="section-heading reveal">
+          <p class="eyebrow">买家反馈示例 / 模拟展示</p>
+          <h2>重点不是吹得多响，是交付后能讲、能跑、能验收。</h2>
+          <p>下面是按真实交易常见反馈风格整理的匿名示例，用来展示你想传达的服务体验。</p>
+        </div>
+        <div class="buyer-review-board reveal" aria-label="买家反馈概览">
+          <div>
+            <span>闲鱼口碑</span>
+            <strong>100% 好评</strong>
+          </div>
+          <div>
+            <span>沟通方式</span>
+            <strong>先确认再付款</strong>
+          </div>
+          <div>
+            <span>论文承诺</span>
+            <strong>高于 20% 退款</strong>
+          </div>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card reveal">
+            <div class="buyer-row">
+              <span class="buyer-avatar">软</span>
+              <div>
+                <strong>软件工程同学</strong>
+                <small>管理系统方向 · 已验收</small>
+              </div>
+            </div>
+            <p>“程序跑起来很顺，后台、用户端、数据库都讲得明白，答辩问到权限也能解释。”</p>
+            <span>评价关键词：能运行、讲得清、材料齐</span>
+          </article>
+          <article class="review-card reveal">
+            <div class="buyer-row">
+              <span class="buyer-avatar">计</span>
+              <div>
+                <strong>计算机应用同学</strong>
+                <small>Vue3 项目 · 分步付款</small>
+              </div>
+            </div>
+            <p>“分步骤付款比较安心，先确认程序，再补论文和 PPT，沟通速度比预期快。”</p>
+            <span>评价关键词：付款安心、回复快、流程清楚</span>
+          </article>
+          <article class="review-card reveal">
+            <div class="buyer-row">
+              <span class="buyer-avatar">数</span>
+              <div>
+                <strong>大数据方向同学</strong>
+                <small>数据看板 · 文件齐全</small>
+              </div>
+            </div>
+            <p>“不是只给源码，运行说明、数据库脚本、截图材料都整理好了，省了很多时间。”</p>
+            <span>评价关键词：脚本完整、截图齐、少返工</span>
+          </article>
+          <article class="review-card reveal">
+            <div class="buyer-row">
+              <span class="buyer-avatar">本</span>
+              <div>
+                <strong>专升本同学</strong>
+                <small>校园服务方向 · 论文已交</small>
+              </div>
+            </div>
+            <p>“老师说选题挺贴近实际场景，论文里系统分析和功能模块写得比较完整。”</p>
+            <span>评价关键词：题材合适、论文完整、好答辩</span>
+          </article>
+          <article class="review-card reveal">
+            <div class="buyer-row">
+              <span class="buyer-avatar">小</span>
+              <div>
+                <strong>小程序方向同学</strong>
+                <small>微信小程序 · 程序优先</small>
+              </div>
+            </div>
+            <p>“先看了演示效果才继续付款，页面、接口、数据库都能对上，后面写论文也方便。”</p>
+            <span>评价关键词：先验程序、接口清楚、能对照论文</span>
+          </article>
+          <article class="review-card reveal">
+            <div class="buyer-row">
+              <span class="buyer-avatar">信</span>
+              <div>
+                <strong>信管专业同学</strong>
+                <small>企业 OA · 一条龙</small>
+              </div>
+            </div>
+            <p>“1400 整套拿比较省心，程序、论文、答辩材料一起整理，最后没有临时加价。”</p>
+            <span>评价关键词：价格透明、整套省心、无隐藏项</span>
+          </article>
+          <article class="review-card reveal">
+            <div class="buyer-row">
+              <span class="buyer-avatar">医</span>
+              <div>
+                <strong>医信方向同学</strong>
+                <small>挂号系统 · 论文承诺</small>
+              </div>
+            </div>
+            <p>“论文是按系统模块写的，功能截图和数据库设计能对应上，查重承诺写清楚了比较放心。”</p>
+            <span>评价关键词：模块对应、查重承诺、风险低</span>
+          </article>
+          <article class="review-card reveal">
+            <div class="buyer-row">
+              <span class="buyer-avatar">电</span>
+              <div>
+                <strong>电商方向同学</strong>
+                <small>商城项目 · 答辩准备</small>
+              </div>
+            </div>
+            <p>“功能点讲得很细，管理员、用户、订单、评价这些模块答辩时都能展开说。”</p>
+            <span>评价关键词：功能完整、角色清晰、答辩好讲</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-pad payment-section">
+        <div class="payment-panel reveal">
+          <div>
+            <p class="eyebrow">付款方式</p>
+            <h2>统一走闲鱼，支持一个步骤付款一次。</h2>
+            <p>
+              可以先确认项目题目和程序效果，再继续论文与配套文件。过程透明、价格提前说清楚，避免后面临时加价。普通项目全部定制开发；GitHub 开源项目指定部署是 ¥400 特殊项目，只包含 PRD 已列内容，后续新增功能另行付费。介绍成交可享最高 20% 返佣，论文查重率高于 20%，直接全额退款。
+            </p>
+          </div>
+          <button class="primary-action copy-qq" id="copyQqBottom" type="button">
+            <span>复制联系 QQ</span>
+            <b>3153566913</b>
+          </button>
+        </div>
+      </section>
+
+      <section class="section-pad referral-section" id="referral">
+        <div class="referral-panel reveal">
+          <div class="referral-number">
+            <span>介绍返佣</span>
+            <strong>20%</strong>
+          </div>
+          <div class="referral-copy">
+            <p class="eyebrow">介绍人福利</p>
+            <h2>介绍同学成交，最高可享 20% 返佣。</h2>
+            <p>
+              只要介绍的同学最终成交，就可以按订单金额和服务类型确认返佣比例。普通定制项目、论文、配套文件、GitHub 指定部署都可以先沟通规则，再确认返佣。
+            </p>
+            <div class="referral-steps" aria-label="返佣流程">
+              <span>介绍同学</span>
+              <span>确认需求</span>
+              <span>闲鱼成交</span>
+              <span>结算返佣</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad faq-section" id="faq">
+        <div class="section-heading reveal">
+          <p class="eyebrow">常见问题</p>
+          <h2>先把你最关心的讲清楚。</h2>
+        </div>
+        <div class="faq-list">
+          <details class="reveal" open>
+            <summary>可以只买某一部分吗？</summary>
+            <p>可以。程序 800，论文 400，论文外所有文件 200，也可以选择 1400 一条龙。</p>
+          </details>
+          <details class="reveal">
+            <summary>项目能不能换题材？</summary>
+            <p>可以。普通毕设项目全部按需求定制开发，可以先从项目库里挑方向，再根据学校要求调整题目、角色、模块和论文描述。</p>
+          </details>
+          <details class="reveal">
+            <summary>GitHub 开源项目部署 400 是什么？</summary>
+            <p>这是特殊项目：基于 GitHub 开源项目，按 PRD 里列明的内容进行指定部署，只负责部署和基础演示。PRD 外新增功能需要另行付费，也不包含论文与答辩材料。</p>
+          </details>
+          <details class="reveal">
+            <summary>怎么付款更稳？</summary>
+            <p>走闲鱼付款，支持一个步骤确认一次，程序、论文、文件可以分阶段处理。</p>
+          </details>
+          <details class="reveal">
+            <summary>论文查重怎么承诺？</summary>
+            <p>论文按约定交付后，如果查重率高于 20%，直接全额退款。这个承诺会提前写清楚。</p>
+          </details>
+          <details class="reveal">
+            <summary>介绍人返佣怎么算？</summary>
+            <p>介绍同学成交后，介绍人最高可享 20% 返佣，具体比例按订单金额和服务类型提前确认。</p>
+          </details>
+          <details class="reveal">
+            <summary>适合什么专业？</summary>
+            <p>主要面向计算机、软件工程、信息管理、物联网、电子商务、大数据相关方向。</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 毕设交付台 · 价格透明 · 闲鱼交易 · 100% 好评率</p>
+      <a href="#top">回到顶部</a>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">QQ 已复制</div>
+    <div class="quick-contact" aria-label="快速联系">
+      <span>想少走弯路？先发题目，直接看匹配方案。</span>
+      <button id="copyQqFloat" type="button">复制 QQ 3153566913</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
