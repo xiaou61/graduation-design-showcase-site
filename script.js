@@ -343,6 +343,36 @@ function showToast(message) {
   window.setTimeout(() => elements.toast.classList.remove("show"), 1800);
 }
 
+function trackVisit() {
+  if (!window.fetch) {
+    return;
+  }
+
+  const payload = {
+    path: `${window.location.pathname}${window.location.search}`,
+    title: document.title,
+    referrer: document.referrer,
+    language: navigator.language || "",
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || "",
+    screenWidth: window.screen ? window.screen.width : 0,
+    screenHeight: window.screen ? window.screen.height : 0,
+    viewportWidth: window.innerWidth,
+    viewportHeight: window.innerHeight
+  };
+
+  fetch("/api/track", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    credentials: "same-origin",
+    keepalive: true,
+    body: JSON.stringify(payload)
+  }).catch(() => {
+    // 静态托管时没有后端，忽略上报失败。
+  });
+}
+
 function setupReveal() {
   const items = document.querySelectorAll(".reveal");
   const observer = new IntersectionObserver(
@@ -421,3 +451,4 @@ setupReveal();
 setupScrollProgress();
 setupTiltCards();
 loadProjects();
+trackVisit();

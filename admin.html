@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>访问统计后台 | 毕设交付台</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/admin.css" />
+  </head>
+  <body class="admin-page">
+    <header class="admin-topbar">
+      <a class="admin-brand" href="/admin" aria-label="访问统计后台">
+        <span>AD</span>
+        <div>
+          <strong>毕设交付台</strong>
+          <small>访问统计后台</small>
+        </div>
+      </a>
+      <div class="topbar-actions">
+        <a class="site-link" href="/" target="_blank" rel="noreferrer">查看网站</a>
+        <button class="quiet-button" id="refreshButton" type="button">刷新</button>
+        <button class="danger-button" id="logoutButton" type="button">退出</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section class="dashboard-hero">
+        <div>
+          <p>Traffic Intelligence</p>
+          <h1>访客、IP 与地区统计</h1>
+        </div>
+        <div class="range-tabs" id="rangeTabs" aria-label="统计时间范围">
+          <button type="button" data-range="today">今天</button>
+          <button type="button" data-range="7d" class="is-active">7 天</button>
+          <button type="button" data-range="30d">30 天</button>
+          <button type="button" data-range="90d">90 天</button>
+          <button type="button" data-range="all">全部</button>
+        </div>
+      </section>
+
+      <section class="metric-grid" aria-label="核心统计">
+        <article class="metric-card">
+          <span>访问量</span>
+          <strong id="pageviewsMetric">0</strong>
+          <small>当前时间范围内的页面访问次数</small>
+        </article>
+        <article class="metric-card accent-teal">
+          <span>访客数</span>
+          <strong id="visitorsMetric">0</strong>
+          <small>按访客 Cookie 去重统计</small>
+        </article>
+        <article class="metric-card accent-coral">
+          <span>独立 IP</span>
+          <strong id="ipsMetric">0</strong>
+          <small>按代理头解析的客户端 IP</small>
+        </article>
+        <article class="metric-card accent-gold">
+          <span>今天访客</span>
+          <strong id="todayMetric">0</strong>
+          <small><b id="onlineMetric">0</b> 人近 5 分钟访问</small>
+        </article>
+      </section>
+
+      <section class="analytics-grid">
+        <article class="panel trend-panel">
+          <div class="panel-heading">
+            <div>
+              <span>趋势</span>
+              <h2>按时间统计</h2>
+            </div>
+            <small id="updatedAt">--</small>
+          </div>
+          <canvas id="trendChart" width="960" height="320" aria-label="访问趋势图"></canvas>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <span>地区</span>
+              <h2>访问来源</h2>
+            </div>
+          </div>
+          <div class="rank-list" id="regionList"></div>
+        </article>
+      </section>
+
+      <section class="analytics-grid compact-grid">
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <span>页面</span>
+              <h2>热门入口</h2>
+            </div>
+          </div>
+          <div class="rank-list" id="pageList"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <span>设备</span>
+              <h2>访问设备</h2>
+            </div>
+          </div>
+          <div class="chip-board" id="deviceList"></div>
+        </article>
+      </section>
+
+      <section class="panel table-panel">
+        <div class="panel-heading">
+          <div>
+            <span>实时明细</span>
+            <h2>最近访问记录</h2>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>时间</th>
+                <th>访客</th>
+                <th>真实 IP</th>
+                <th>地区</th>
+                <th>页面</th>
+                <th>设备</th>
+                <th>来源</th>
+              </tr>
+            </thead>
+            <tbody id="visitRows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast-line" id="toastLine" role="status" aria-live="polite"></div>
+    <script src="/admin.js"></script>
+  </body>
+</html>
