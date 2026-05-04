@@ -83,6 +83,7 @@ const elements = {
   toast: document.querySelector("#toast"),
   scrollProgress: document.querySelector("#scrollProgress"),
   quickContact: document.querySelector(".quick-contact"),
+  pricing: document.querySelector("#pricing"),
   projectTotal: document.querySelector("#projectTotal"),
   hotTotal: document.querySelector("#hotTotal"),
   latestTotal: document.querySelector("#latestTotal"),
@@ -306,7 +307,7 @@ function bindEvents() {
     applyFilters();
   });
 
-  document.querySelectorAll("#copyQqTop, #copyQqBottom, #copyQqFloat").forEach((button) => {
+  document.querySelectorAll("#copyQqTop, #copyQqBottom, #copyQqFloat, .copy-qq-trigger").forEach((button) => {
     button.addEventListener("click", copyQq);
   });
 }
@@ -401,7 +402,10 @@ function setupScrollProgress() {
     elements.scrollProgress.style.width = `${progress}%`;
 
     if (elements.quickContact) {
-      elements.quickContact.classList.toggle("is-active", window.scrollY > Math.min(360, window.innerHeight * 0.42));
+      const pricingRect = elements.pricing ? elements.pricing.getBoundingClientRect() : null;
+      const pricingInView = pricingRect && pricingRect.top < window.innerHeight - 80 && pricingRect.bottom > 120;
+      const readyToShow = window.scrollY > Math.min(360, window.innerHeight * 0.42);
+      elements.quickContact.classList.toggle("is-active", readyToShow && !pricingInView);
     }
 
     if (elements.siteHeader) {
@@ -422,7 +426,7 @@ function setupTiltCards(targets) {
 
   const items =
     targets ||
-    document.querySelectorAll(".price-card, .project-card, .review-card, .process-item, .faq-list details");
+    document.querySelectorAll(".price-card, .micro-card, .project-card, .review-card, .process-item, .faq-list details");
 
   items.forEach((item) => {
     if (item.dataset.tiltBound) {
